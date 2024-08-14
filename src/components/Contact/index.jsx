@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
 import RoundedButton from "../../common/RoundedButton";
 import Link from "next/link";
+import ShimmerButton from "../magicui/shimmer-button";
 
 export default function Contact() {
   const container = useRef(null);
@@ -17,11 +18,11 @@ export default function Contact() {
     <motion.div
       style={{ y }}
       ref={container}
-      className="text-white flex flex-col items-center justify-center bg-[#141516] relative overflow-hidden"
+      className="text-white flex flex-row items-center justify-center bg-[#141516] relative overflow-hidden"
     >
-      <div className="pt-16 sm:pt-24 md:pt-32 lg:pt-[200px] w-full max-w-[1800px] bg-[#141516]">
+      <div className="pt-16 w-full max-w-[1800px] bg-[#141516]">
         <div className="border-b border-gray-500 pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] relative">
-          <span className="flex items-center flex-col sm:flex-row">
+          <span className="flex items-center sm:flex-row">
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[100px] lg:h-[100px] relative rounded-full overflow-hidden mb-4 sm:mb-0">
               <Image
                 fill={true}
@@ -35,7 +36,7 @@ export default function Contact() {
             </h2>
             <br />
           </span>
-          <h2 className="text-base text-justify mb-20  md:text-xl font-normal sm:ml-3 lg:ml-[0.3em]">
+          <h2 className="text-base text-justify mb-4  md:text-xl font-normal sm:ml-3 lg:ml-[0.3em]">
             <br />
             DRIVEN BY PASSION, I'VE WORKED TIRELESSLY TO CHASE MY DREAMS, NEVER
             SETTLING FOR 'GOOD ENOUGH'. MY HUNGER FOR KNOWLEDGE IS CONSTANT -
@@ -50,14 +51,17 @@ export default function Contact() {
              lg:left-[calc(100%-200px)] lg:top-[calc(100%-75px)] lg:transform-none"
           >
             <Link href="https://www.linkedin.com/in/luis-merc4do/">
-              <RoundedButton className="lg:left-[calc(100%-200px)]">
+              <ShimmerButton
+                className="lg:left-[calc(100%-200px)] h-16 w-40 mb-10"
+                background="rgba(0, 0, 0, 0.8)"
+              >
                 Get in Touch
-              </RoundedButton>
+              </ShimmerButton>
             </Link>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between p-4 sm:p-8 md:p-12 lg:p-[20px]">
+        <div className="flex flex-col sm:flex-row p-4 sm:p-8 md:p-12 lg:p-[20px] text-center">
           <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-[10px] items-end mb-8 sm:mb-0">
             <span className="flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-[15px]">
               <h3 className="text-gray-400 cursor-default font-light text-sm sm:text-base md:text-lg lg:text-[1em] m-0 p-1 sm:p-2 lg:p-[2.5px]">

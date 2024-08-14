@@ -11,17 +11,16 @@ const SkeletonLoader = () => (
 );
 const LusionInspiredLanding = () => {
   return (
-    <div className="min-h-screen bg-[#f0f1fa] text-black font-sans">
+    <div className="min-h-screen bg-[#f0f1fa] text-black">
       <Header />
       <main className="flex flex-col items-center justify-center px-6 py-24 md:py-24 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-7xl font-bold max-w-3xl text-black mb-3"
+          className="text-4xl md:text-7xl font-black max-w-3xl text-black mb-3"
         >
-          Luis Mercado
-          <br />
+          <h2>Luis Mercado</h2>
         </motion.h1>
         <motion.p
           className="text-3xl mb-8 max-w-xs md:max-w-4xl"

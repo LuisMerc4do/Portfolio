@@ -27,7 +27,7 @@ export default function Header() {
     <>
       <header
         ref={header}
-        className="fixed top-0 left-0 right-0 flex justify-between items-center z-50 w-full text-black p-3 md:px-10 font-normal box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-md h-14"
+        className="fixed top-0 left-0 right-0 flex justify-between items-center z-50 w-full text-black p-3 md:px-10 font-normalh-14"
       >
         <div className="flex cursor-pointer group">
           <p className="m-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
@@ -45,7 +45,7 @@ export default function Header() {
             </p>
           </div>
         </div>
-        <nav className="flex items-center">
+        <nav className="flex items-center  box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-md rounded-lg">
           {["Work", "About", "Contact"].map((item) => (
             <Magnetic key={item}>
               <div className="flex flex-col relative z-10 p-2 md:p-[15px] cursor-pointer group">

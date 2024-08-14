@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 const projects = [
   {
@@ -58,29 +58,11 @@ const ProjectCard = ({ project, index }) => {
 };
 
 const Projects = () => {
-  const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, amount: 0.2 });
-
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
-      <div ref={headerRef}>
-        <h2
-          className="text-5xl md:text-7xl font-bold mb-4 transition-all duration-500 ease-out"
-          style={{
-            opacity: headerInView ? 1 : 0,
-            transform: headerInView ? "translateY(0)" : "translateY(-50px)",
-          }}
-        >
-          Featured Work
-        </h2>
-        <p
-          className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl transition-all duration-500 ease-out"
-          style={{
-            opacity: headerInView ? 1 : 0,
-            transform: headerInView ? "translateY(0)" : "translateY(-30px)",
-            transitionDelay: "0.2s",
-          }}
-        >
+      <div>
+        <h2 className="text-5xl md:text-7xl font-bold mb-4">Featured Work</h2>
+        <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl">
           THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
           SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
         </p>
