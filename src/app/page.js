@@ -83,12 +83,13 @@ export default function Home() {
           <Suspense fallback={<div>Loading Skills...</div>}>
             <Skills />
           </Suspense>
-          <Suspense fallback={<div>Loading Features...</div>}>
-            <Features />
-          </Suspense>
           <Suspense fallback={<div>Loading Projects...</div>}>
             <Projects />
           </Suspense>
+          <Suspense fallback={<div>Loading Features...</div>}>
+            <Features />
+          </Suspense>
+
           <Suspense fallback={<div>Loading Contact...</div>}>
             <Contact />
           </Suspense>

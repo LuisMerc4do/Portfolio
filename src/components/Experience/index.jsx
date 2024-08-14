@@ -12,13 +12,15 @@ export default function Experience() {
     <section className="py-16 container mb-10">
       <div className="text-right mb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-4">My Experience</h2>
-        <p className="text-sm md:text-base text-gray-600 max-w-3xl ml-auto">
-          A UNIQUE BLEND OF HANDS-ON PROJECTS AND INNOVATIVE APPROACHES AND
-          ANALYTICAL THINKING FORGING MY DISTINCTIVE PATH, MARKED BY IMPACTFUL
-          PROJECTS
-        </p>
+        <h2 className="text-sm md:text-base text-gray-600 max-w-2xl text-right ml-auto">
+          A UNIQUE BLEND OF LEGAL CRITICAL THINKING AND INNOVATIVE APPROACHES
+          AND FORGING MY DISTINCTIVE PATH{" "}
+          <span className="italic underline text-center">
+            . WHILE STUDYING I ALWAYS WORKED AS A CASUAL PROGRAMMER FOR GAME
+            SERVERS, SMALL COMPANIES AND AS FREELANCER
+          </span>
+        </h2>
       </div>
-
       <VerticalTimeline lineColor="#f0f1fa">
         {experiencesData.map((item, index) => (
           <VerticalTimelineElement

@@ -51,7 +51,7 @@ const LusionInspiredLanding = () => {
           </ShimmerButton>
         </Link>
         {/* Scroll Indicator */}
-        <div className="mt-10 md:mt-32 text-sm uppercase tracking-widest">
+        <div className="mt-32 text-sm uppercase tracking-widest">
           SCROLL TO EXPLORE ↓
         </div>
       </main>
