@@ -2,6 +2,9 @@ import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import Header from "../Header";
 import SplineComponent from "../SplineComponent";
+import Link from "next/link";
+import ShimmerButton from "../magicui/shimmer-button";
+
 const SkeletonLoader = () => (
   <div className="w-full max-w-7xl rounded-xl h-96 mt-6 bg-black flex items-center justify-center overflow-hidden">
     <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
@@ -18,12 +21,12 @@ const LusionInspiredLanding = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-7xl font-black max-w-3xl text-black mb-3"
+          className="text-6xl md:text-7xl font-black max-w-3xl text-black mb-3"
         >
-          <h2>Luis Mercado</h2>
+          <span>Luis Mercado</span>
         </motion.h1>
         <motion.p
-          className="text-3xl mb-8 max-w-xs md:max-w-4xl"
+          className="text-2xl mb-8 max-w-xs md:max-w-4xl"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -37,18 +40,21 @@ const LusionInspiredLanding = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="w-full max-w-7xl rounded-xl h-96 mt-6 bg-black flex items-center justify-center"
+            className="w-full max-w-7xl rounded-xl h-96 mt-6 bg-black flex items-center justify-center mb-10"
           >
             <SplineComponent />
           </motion.div>
         </Suspense>
-
+        <Link href="https://www.linkedin.com/in/luis-merc4do/">
+          <ShimmerButton className="h-16 w-40 " background="rgba(0, 0, 0, 0.8)">
+            Get in Touch
+          </ShimmerButton>
+        </Link>
         {/* Scroll Indicator */}
         <div className="mt-10 text-sm uppercase tracking-widest">
           SCROLL TO EXPLORE ↓
         </div>
       </main>
-
       {/* Corner Markers */}
       <div className="hidden md:fixed top-0 left-0 m-4 text-3xl">+</div>
       <div className="hidden md:fixed top-0 right-0 m-4 text-3xl">+</div>

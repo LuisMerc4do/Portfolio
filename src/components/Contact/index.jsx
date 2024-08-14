@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
-import RoundedButton from "../../common/RoundedButton";
 import Link from "next/link";
 import ShimmerButton from "../magicui/shimmer-button";
 

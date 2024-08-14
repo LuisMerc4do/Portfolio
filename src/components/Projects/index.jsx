@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import { useInView } from "framer-motion";
+import React, { useState } from "react";
 
 const projects = [
   {
@@ -24,26 +23,16 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project, index }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+const ProjectCard = ({ project }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div
-      ref={ref}
-      className="w-full md:w-1/2 p-4 transition-all duration-500 ease-out"
-      style={{
-        opacity: isInView ? 1 : 0,
-        transform: isInView ? "translateY(0)" : "translateY(50px)",
-        transitionDelay: `${index * 0.1}s`,
-      }}
-    >
-      <div className="rounded-lg overflow-hidden transition-transform duration-300 ease-out hover:scale-105">
+    <div className="w-full md:w-1/2 p-4">
+      <div className="rounded-lg overflow-hidden hover:scale-105">
         <img
           src={project.image}
           alt={project.title}
-          className={`w-full h-64 object-cover transition-opacity duration-300 ${
+          className={`w-full h-64 object-cover ${
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
           onLoad={() => setImageLoaded(true)}
@@ -69,7 +58,7 @@ const Projects = () => {
       </div>
       <div className="flex flex-wrap -mx-4">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} index={index} />
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </section>
