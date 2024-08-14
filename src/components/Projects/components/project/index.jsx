@@ -14,7 +14,7 @@ export default function index({ index, title, manageModal, type }) {
       className={styles.project}
     >
       <h2>{title}</h2>
-      <p>{type}</p>
+      <h2>{type}</h2>
     </div>
   );
 }

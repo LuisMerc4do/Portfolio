@@ -1,79 +1,52 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
-
-export default function Home() {
-  const container = useRef(null);
-  const stickyMask = useRef(null);
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const initialMaskSize = 80;
-  const targetMaskSize = 3000;
-  const easing = 0.15;
-  let easedScrollProgress = 0;
-
-  useEffect(() => {
-    requestAnimationFrame(animate);
-  }, []);
-
-  const animate = () => {
-    const maskSizeProgress = targetMaskSize * getScrollProgress();
-    stickyMask.current.style.maskSize = `${
-      initialMaskSize + maskSizeProgress
-    }%`;
-    requestAnimationFrame(animate);
-  };
-
-  const getScrollProgress = () => {
-    const scrollProgress =
-      stickyMask.current.offsetTop /
-      (container.current.getBoundingClientRect().height - window.innerHeight);
-    const delta = scrollProgress - easedScrollProgress;
-    easedScrollProgress += delta * easing;
-    return easedScrollProgress;
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
-
+import React from "react";
+import SectionHeading from "./section-heading";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { experiencesData } from "@/lib/data";
+export default function Experience() {
   return (
-    <main className="mb-[10vh]">
-      <div ref={container} className="relative h-[300vh] bg-white">
-        <div
-          ref={stickyMask}
-          className="flex overflow-hidden sticky top-0 h-screen items-center justify-center"
-          style={{
-            maskImage: 'url("/medias/mask.svg")',
-            maskPosition: "52.35% center",
-            maskRepeat: "no-repeat",
-            maskSize: "80%",
-          }}
-        >
-          <video
-            ref={videoRef}
-            className="h-full w-full object-cover"
-            muted
-            loop
-          >
-            <source src="/medias/nature.mp4" type="video/mp4" />
-          </video>
-          {!isPlaying && (
-            <button
-              onClick={togglePlay}
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-6xl"
+    <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
+      <h1>My Experience</h1>
+      <VerticalTimeline lineColor="">
+        {experiencesData.map((item, index) => (
+          <React.Fragment key={index}>
+            <VerticalTimelineElement
+              contentStyle={{
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                boxShadow: "none",
+                border: "1px solid rgba(0, 0, 0, 0.05)",
+                textAlign: "left",
+                padding: "1.3rem 2rem",
+              }}
+              contentArrowStyle={{
+                borderRight:
+                  theme === "light"
+                    ? "0.4rem solid #9ca3af"
+                    : "0.4rem solid rgba(255, 255, 255, 0.5)",
+              }}
+              date={item.date}
+              icon={item.icon}
+              iconStyle={{
+                background:
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                fontSize: "1.5rem",
+              }}
             >
-              ▶
-            </button>
-          )}
-        </div>
-      </div>
-    </main>
+              <h3 className="font-semibold capitalize">{item.title}</h3>
+              <p className="font-normal !mt-0">{item.location}</p>
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                {item.description}
+              </p>
+            </VerticalTimelineElement>
+          </React.Fragment>
+        ))}
+      </VerticalTimeline>
+    </section>
   );
 }

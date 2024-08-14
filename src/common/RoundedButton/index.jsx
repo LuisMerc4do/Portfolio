@@ -41,9 +41,9 @@ export default function RoundedButton({ children, className, ...attributes }) {
         onMouseLeave={manageMouseLeave}
         {...attributes}
       >
-        <p className="m-0 text-lg lg:text-[16px] z-[2] relative font-bold">
+        <span className="m-0 text-lg lg:text-[16px] z-[2] relative font-bold">
           {children}
-        </p>
+        </span>
         <div
           ref={circle}
           className="w-full h-[150%] absolute rounded-[50%] top-full bg-[#1a2ffb]"

@@ -3,8 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import styles from "./page.module.scss";
-
+import Skills from "@/components/Skills";
 const Preloader = dynamic(() => import("../components/Preloader"), {
   ssr: false,
 });
@@ -13,6 +12,9 @@ const Description = dynamic(() => import("../components/Description"), {
   ssr: false,
 });
 const Projects = dynamic(() => import("../components/Projects"), {
+  ssr: false,
+});
+const Features = dynamic(() => import("../components/Features"), {
   ssr: false,
 });
 const Contact = dynamic(() => import("../components/Contact"), { ssr: false });
@@ -47,13 +49,15 @@ export default function Home() {
         {isLoading && <Preloader onComplete={handlePreloaderComplete} />}
       </AnimatePresence>
       <motion.main
-        className={styles.main}
+        className=""
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <Landing />
         <Description />
+        <Skills />
+        <Features />
         <Projects />
         <Contact />
       </motion.main>

@@ -35,7 +35,7 @@ export default function Contact() {
             </h2>
             <br />
           </span>
-          <h2 className="text-md text-justify mb-20  md:text-3xl font-normal sm:ml-3 lg:ml-[0.3em]">
+          <h2 className="text-base text-justify mb-20  md:text-xl font-normal sm:ml-3 lg:ml-[0.3em]">
             <br />
             DRIVEN BY PASSION, I'VE WORKED TIRELESSLY TO CHASE MY DREAMS, NEVER
             SETTLING FOR 'GOOD ENOUGH'. MY HUNGER FOR KNOWLEDGE IS CONSTANT -
@@ -50,7 +50,7 @@ export default function Contact() {
              lg:left-[calc(100%-200px)] lg:top-[calc(100%-75px)] lg:transform-none"
           >
             <Link href="https://www.linkedin.com/in/luis-merc4do/">
-              <RoundedButton className="lg:absolute lg:left-[calc(100%-200px)]">
+              <RoundedButton className="lg:left-[calc(100%-200px)]">
                 Get in Touch
               </RoundedButton>
             </Link>

@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
 import Header from "../Header";
-import SplineComponent from "../splinecomponent";
+import SplineComponent from "../SplineComponent";
 const SkeletonLoader = () => (
   <div className="w-full max-w-7xl rounded-xl h-96 mt-6 bg-black flex items-center justify-center overflow-hidden">
     <div className="w-full h-full flex flex-col items-center justify-center space-y-4">
