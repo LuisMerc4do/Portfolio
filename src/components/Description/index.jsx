@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
-import { useInView, motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import Link from "next/link";
 import BlurFade from "../../../components/world-pull-up";
+import ShimmerButton from "../magicui/shimmer-button";
 
 export const slideUp = {
   initial: { y: "100%" },
@@ -38,21 +39,14 @@ export default function Description() {
         <BlurFade
           delay={0.25 * 2}
           inView
-          className="text-base sm:text-lg md:text-xl lg:text-[18px] w-full lg:w-4/5 font-light m-0"
+          className="text-base sm:text-lg md:text-xl lg:text-[18px] w-full lg:w-4/5 font-light"
         >
           BRIDGING PASSION AND INNOVATION IN THE DIGITAL REALM. READY TO
           REDEFINE WHAT'S POSSIBLE.
-        </BlurFade>
-
-        <div
-          data-scroll
-          data-scroll-speed={0.1}
-          className="mt-8 lg:mt-0 mx-auto text-white"
-        >
           <Link href="https://www.linkedin.com/in/luis-merc4do/">
-            <ShinyButton>Contact Me</ShinyButton>
+            <ShimmerButton className="mt-4 mx-auto">Contact Me</ShimmerButton>
           </Link>
-        </div>
+        </BlurFade>
       </div>
     </div>
   );
