@@ -25,6 +25,7 @@ export const experiencesData = [
   },
 ] as const;
 export const skillsData = [
+  "ASP.NET",
   "HTML",
   "CSS",
   "JavaScript",
@@ -38,10 +39,10 @@ export const skillsData = [
   "MongoDB",
   "Redux",
   "GraphQL",
-  "Apollo",
   "Express",
   "PostgreSQL",
   "Python",
-  "Django",
   "Framer Motion",
+  "Azure",
+  "AWS",
 ] as const;

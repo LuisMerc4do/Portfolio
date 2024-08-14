@@ -51,10 +51,10 @@ export default function Contact() {
           >
             <Link href="https://www.linkedin.com/in/luis-merc4do/">
               <ShimmerButton
-                className="lg:left-[calc(100%-200px)] h-16 w-40 mb-10"
-                background="rgba(0, 0, 0, 0.8)"
+                className="lg:left-[calc(100%-200px)] h-16 w-60 mb-10"
+                background="rgba(26, 47, 251, 0.8)"
               >
-                Get in Touch
+                Let me show you my worth
               </ShimmerButton>
             </Link>
           </div>
