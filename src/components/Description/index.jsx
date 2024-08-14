@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import RoundedButton from "../../common/RoundedButton";
 import Link from "next/link";
+import BlurFade from "../../../components/world-pull-up";
 
 export const slideUp = {
   initial: { y: "100%" },
@@ -16,32 +17,24 @@ export const opacity = {
 };
 
 export default function Description() {
-  const phrase =
-    "I'm  Luis Mercado, a Software Engineer and Full Stack Developer on a mission to create impactful digital solutions. With expertise in Next.js, React, ASP.NET, TypeScript, and Python, but my true strength lies in my insatiable appetite for learning.";
   const description = useRef(null);
   const isInView = useInView(description);
 
   return (
     <div
       ref={description}
-      className="px-4 sm:px-8 md:px-16 lg:px-[200px] mt-16 sm:mt-24 md:mt-32 lg:mt-[200px] flex justify-center mb-12 sm:mb-20 md:mb-34 lg:mb-36"
+      className="px-4 sm:px-8 md:px-16 lg:px-[200px] mt-10 flex justify-center mb-12"
     >
       <div className="max-w-[1400px] flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-[50px] relative">
         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] leading-tight lg:leading-[1.3] m-0">
-          {phrase.split(" ").map((word, index) => (
-            <span
-              key={index}
-              className="relative overflow-hidden inline-flex mr-[3px] text-justify"
-            >
-              <motion.span
-                variants={slideUp}
-                custom={index}
-                animate={isInView ? "open" : "closed"}
-              >
-                {word}
-              </motion.span>
+          <BlurFade delay={0.25 * 2} inView>
+            <span>
+              I'm Luis Mercado, a Software Engineer and Full Stack Developer on
+              a mission to create impactful digital solutions. With expertise in
+              Next.js, React, ASP.NET, TypeScript, and Python, but my true
+              strength lies in my insatiable appetite for learning.
             </span>
-          ))}
+          </BlurFade>
         </span>
         <motion.p
           variants={opacity}

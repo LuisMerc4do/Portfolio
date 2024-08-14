@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 const projects = [
   {
@@ -24,56 +24,74 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project }) => (
-  <motion.div
-    className="w-full md:w-1/2 p-4"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <motion.div
-      className="rounded-lg overflow-hidden"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-    >
-      <img
-        src={project.image}
-        alt={project.title}
-        className="w-full h-64 object-cover"
-      />
-      <div className="p-4 bg-gray-100">
-        <p className="text-sm text-gray-600">{project.category}</p>
-        <h3 className="text-xl font-semibold mt-2">{project.title}</h3>
-      </div>
-    </motion.div>
-  </motion.div>
-);
+const ProjectCard = ({ project, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [imageLoaded, setImageLoaded] = useState(false);
 
-const Projects = () => (
-  <section className="py-16 px-4 max-w-7xl mx-auto">
-    <motion.h2
-      className="text-5xl md:text-7xl font-bold mb-4"
-      initial={{ opacity: 0, y: -50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+  return (
+    <div
+      ref={ref}
+      className="w-full md:w-1/2 p-4 transition-all duration-500 ease-out"
+      style={{
+        opacity: isInView ? 1 : 0,
+        transform: isInView ? "translateY(0)" : "translateY(50px)",
+        transitionDelay: `${index * 0.1}s`,
+      }}
     >
-      Featured Work
-    </motion.h2>
-    <motion.p
-      className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl"
-      initial={{ opacity: 0, y: -30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-    >
-      THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
-      SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
-    </motion.p>
-    <div className="flex flex-wrap -mx-4">
-      {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))}
+      <div className="rounded-lg overflow-hidden transition-transform duration-300 ease-out hover:scale-105">
+        <img
+          src={project.image}
+          alt={project.title}
+          className={`w-full h-64 object-cover transition-opacity duration-300 ${
+            imageLoaded ? "opacity-100" : "opacity-0"
+          }`}
+          onLoad={() => setImageLoaded(true)}
+        />
+        <div className="p-4 bg-gray-100">
+          <p className="text-sm text-gray-600">{project.category}</p>
+          <h3 className="text-xl font-semibold mt-2">{project.title}</h3>
+        </div>
+      </div>
     </div>
-  </section>
-);
+  );
+};
+
+const Projects = () => {
+  const headerRef = useRef(null);
+  const headerInView = useInView(headerRef, { once: true, amount: 0.2 });
+
+  return (
+    <section className="py-16 px-4 max-w-7xl mx-auto">
+      <div ref={headerRef}>
+        <h2
+          className="text-5xl md:text-7xl font-bold mb-4 transition-all duration-500 ease-out"
+          style={{
+            opacity: headerInView ? 1 : 0,
+            transform: headerInView ? "translateY(0)" : "translateY(-50px)",
+          }}
+        >
+          Featured Work
+        </h2>
+        <p
+          className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl transition-all duration-500 ease-out"
+          style={{
+            opacity: headerInView ? 1 : 0,
+            transform: headerInView ? "translateY(0)" : "translateY(-30px)",
+            transitionDelay: "0.2s",
+          }}
+        >
+          THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
+          SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
+        </p>
+      </div>
+      <div className="flex flex-wrap -mx-4">
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} index={index} />
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Projects;
