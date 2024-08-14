@@ -8,12 +8,14 @@ const projects = [
   },
   {
     title: "FINANCE APP - a stock management platform",
-    category: "FULL-STACK APP • STOCK APP • ASP.NET • RESPONSIVE",
+    category:
+      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER",
     image: "/images/project-finapp.webp",
   },
   {
     title: "PDF Reader AI - a saas to chat with any PDF",
-    category: "FULL-STACK APP • AI SAAS • NODE.JS • NEXTJS • RESPONSIVE",
+    category:
+      "FULL-STACK • AI SAAS • NODE.JS • TYPESCRIPT •NEXTJS • POSTGRESQL",
     image: "/images/project-pdfreader.webp",
   },
 
@@ -52,7 +54,7 @@ const Projects = () => {
     <section className="py-16 px-4 container mx-auto mb-10">
       <div>
         <h2 className="text-5xl md:text-7xl font-bold mb-4">Featured Work</h2>
-        <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl">
+        <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl text-justify">
           THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
           SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
         </p>

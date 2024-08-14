@@ -12,8 +12,9 @@ export default function Skills() {
     >
       <h2 className="text-5xl md:text-7xl font-bold mb-4">My Skills</h2>
       <p className="text-sm md:text-base text-gray-600 mb-8">
-        THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
-        SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
+        HARNESSING THE POWER OF DIVERSE TECHNOLOGIES: A COMPREHENSIVE SKILLSET
+        BUILT THROUGH RELENTLESS CURIOSITY, PRACTICAL APPLICATION, AND A PASSION
+        FOR PUSHING DIGITAL BOUNDARIES
       </p>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (

@@ -7,47 +7,48 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../../../libs/data";
+
 export default function Experience() {
   return (
-    <div className="items-center justify-center py-16 container mb-10">
-      <div className="text-right">
+    <section className="py-16 container mb-10">
+      <div className="text-right mb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-4">My Experience</h2>
-        <p className="text-sm md:text-base text-gray-600 mb-8 max-w-3xl ml-auto">
-          THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
-          SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
+        <p className="text-sm md:text-base text-gray-600 max-w-3xl ml-auto">
+          A UNIQUE BLEND OF HANDS-ON PROJECTS AND INNOVATIVE APPROACHES AND
+          ANALYTICAL THINKING FORGING MY DISTINCTIVE PATH, MARKED BY IMPACTFUL
+          PROJECTS
         </p>
-
-        <VerticalTimeline lineColor="gray">
-          {experiencesData.map((item, index) => (
-            <React.Fragment key={index}>
-              <VerticalTimelineElement
-                contentStyle={{
-                  background: "#f3f4f6",
-                  boxShadow: "none",
-                  border: "1px solid rgba(0, 0, 0, 0.05)",
-                  textAlign: "left",
-                  padding: "1.3rem 2rem",
-                }}
-                contentArrowStyle={{
-                  borderRight: "0.4rem solid #9ca3af",
-                }}
-                date={item.date}
-                icon={item.icon}
-                iconStyle={{
-                  background: "black",
-                  fontSize: "1.5rem",
-                }}
-              >
-                <h3 className="font-semibold capitalize">{item.title}</h3>
-                <p className="font-normal !mt-0">{item.location}</p>
-                <p className="!mt-1 !font-normal text-gray-700">
-                  {item.description}
-                </p>
-              </VerticalTimelineElement>
-            </React.Fragment>
-          ))}
-        </VerticalTimeline>
       </div>
-    </div>
+
+      <VerticalTimeline lineColor="gray">
+        {experiencesData.map((item, index) => (
+          <VerticalTimelineElement
+            key={index}
+            contentStyle={{
+              background: "#f3f4f6",
+              boxShadow: "none",
+              border: "1px solid rgba(0, 0, 0, 0.05)",
+              textAlign: "left",
+              padding: "1.3rem 2rem",
+            }}
+            contentArrowStyle={{
+              borderRight: "0.4rem solid #9ca3af",
+            }}
+            date={item.date}
+            icon={item.icon}
+            iconStyle={{
+              background: "black",
+              fontSize: "1.5rem",
+            }}
+          >
+            <h3 className="font-semibold capitalize">{item.title}</h3>
+            <p className="font-normal !mt-0">{item.location}</p>
+            <p className="!mt-1 !font-normal text-gray-700">
+              {item.description}
+            </p>
+          </VerticalTimelineElement>
+        ))}
+      </VerticalTimeline>
+    </section>
   );
 }
