@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useInView, motion } from "framer-motion";
-import RoundedButton from "../../common/RoundedButton";
 import Link from "next/link";
 import BlurFade from "../../../components/world-pull-up";
 
@@ -36,23 +35,22 @@ export default function Description() {
             </span>
           </BlurFade>
         </span>
-        <motion.p
-          variants={opacity}
-          animate={isInView ? "open" : "closed"}
+        <BlurFade
+          delay={0.25 * 2}
+          inView
           className="text-base sm:text-lg md:text-xl lg:text-[18px] w-full lg:w-4/5 font-light m-0"
         >
           BRIDGING PASSION AND INNOVATION IN THE DIGITAL REALM. READY TO
           REDEFINE WHAT'S POSSIBLE.
-        </motion.p>
+        </BlurFade>
+
         <div
           data-scroll
           data-scroll-speed={0.1}
-          className="mt-8 lg:mt-0 mx-auto"
+          className="mt-8 lg:mt-0 mx-auto text-white"
         >
           <Link href="https://www.linkedin.com/in/luis-merc4do/">
-            <RoundedButton className="lg:left-[calc(100%-200px)]">
-              Contact Me
-            </RoundedButton>
+            <ShinyButton>Contact Me</ShinyButton>
           </Link>
         </div>
       </div>
