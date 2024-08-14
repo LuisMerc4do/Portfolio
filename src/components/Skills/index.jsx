@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className={`max-w-3xl items-center mx-auto top-0 text-center mb-6 transition-all duration-500 ease-out opacity-100 translate-y-0""
+      className={`max-w-3xl items-center mx-auto top-0 text-center mb-14 transition-all duration-500 ease-out opacity-100 translate-y-0""
       }`}
     >
       <h2 className="text-5xl md:text-7xl font-bold mb-4">My Skills</h2>

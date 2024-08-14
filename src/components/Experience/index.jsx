@@ -9,7 +9,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../../../libs/data";
 export default function Experience() {
   return (
-    <div className="items-center text-center py-16 px-4 max-w-7xl mx-auto mb-10">
+    <div className="items-center justify-center py-16 container mb-10">
       <div className="text-right">
         <h2 className="text-5xl md:text-7xl font-bold mb-4">My Experience</h2>
         <p className="text-sm md:text-base text-gray-600 mb-8 max-w-3xl ml-auto">

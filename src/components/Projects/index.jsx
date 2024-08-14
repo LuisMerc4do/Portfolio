@@ -2,24 +2,25 @@ import React, { useState } from "react";
 
 const projects = [
   {
-    title: "Project One",
-    category: "WEB • DESIGN • DEVELOPMENT • 3D",
-    image: "/path/to/image1.jpg",
+    title: "CoLearning -  a tech learning platform for people in Colombia!",
+    category: "FULL-STACK APP • LMS • INTEGRATED IDE • AI • RESPONSIVE •",
+    image: "/images/project-colearning.webp",
   },
   {
-    title: "Project Two",
-    category: "CONCEPT • 3D ILLUSTRATION • ANIMATION",
-    image: "/path/to/image2.jpg",
+    title: "FINANCE APP - a stock management platform",
+    category: "FULL-STACK APP • STOCK APP • ASP.NET • RESPONSIVE",
+    image: "/images/project-finapp.webp",
   },
   {
-    title: "Project Three",
-    category: "UX/UI • BRANDING • MOBILE APP",
-    image: "/path/to/image3.jpg",
+    title: "PDF Reader AI - a saas to chat with any PDF",
+    category: "FULL-STACK APP • AI SAAS • NODE.JS • NEXTJS • RESPONSIVE",
+    image: "/images/project-pdfreader.webp",
   },
+
   {
-    title: "Project Four",
-    category: "AR/VR • GAME DEVELOPMENT • 3D MODELING",
-    image: "/path/to/image4.jpg",
+    title: "Law Firm APP - a legal firm management System",
+    category: "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • POSTGRESQL",
+    image: "/images/project-lawfirm.webp",
   },
 ];
 
@@ -48,7 +49,7 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section className="py-16 px-4 container mx-auto mb-10">
       <div>
         <h2 className="text-5xl md:text-7xl font-bold mb-4">Featured Work</h2>
         <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl">

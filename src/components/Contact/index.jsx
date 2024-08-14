@@ -19,7 +19,7 @@ export default function Contact() {
       ref={container}
       className="text-white flex flex-row items-center justify-center bg-[#141516] relative overflow-hidden"
     >
-      <div className="pt-16 w-full max-w-[1800px] bg-[#141516]">
+      <div className="pt-14 md:pt-32 w-full max-w-[1800px] bg-[#141516]">
         <div className="border-b border-gray-500 pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] mx-4 sm:mx-8 md:mx-16 lg:mx-[200px] relative">
           <span className="flex items-center sm:flex-row">
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[100px] lg:h-[100px] relative rounded-full overflow-hidden mb-4 sm:mb-0">

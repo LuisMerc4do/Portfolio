@@ -27,7 +27,7 @@ export default function Header() {
     <>
       <header
         ref={header}
-        className="fixed top-0 left-0 right-0 flex justify-between items-center z-50 w-full text-black p-3 md:px-10 font-normalh-14"
+        className="fixed top-0 left-0 right-0 flex justify-between items-center z-50 w-full text-black p-3 md:px-10 font-normal text-lg"
       >
         <div className="flex cursor-pointer group">
           <p className="m-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
