@@ -5,7 +5,6 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "../../../libs/data";
 
 export default function Experience() {
@@ -20,12 +19,13 @@ export default function Experience() {
         </p>
       </div>
 
-      <VerticalTimeline lineColor="gray">
+      <VerticalTimeline lineColor="#f0f1fa">
         {experiencesData.map((item, index) => (
           <VerticalTimelineElement
+            visible={true}
             key={index}
             contentStyle={{
-              background: "#f3f4f6",
+              background: "#f0f1fa",
               boxShadow: "none",
               border: "1px solid rgba(0, 0, 0, 0.05)",
               textAlign: "left",
@@ -37,7 +37,7 @@ export default function Experience() {
             date={item.date}
             icon={item.icon}
             iconStyle={{
-              background: "black",
+              background: "#f0f1fa",
               fontSize: "1.5rem",
             }}
           >
