@@ -18,7 +18,6 @@ export const opacity = {
 
 export default function Description() {
   const description = useRef(null);
-  const isInView = useInView(description);
 
   return (
     <div
@@ -29,10 +28,10 @@ export default function Description() {
         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] leading-tight lg:leading-[1.3] m-0 text-justify">
           <BlurFade delay={0.25 * 2} inView>
             <span>
-              I'm Luis Mercado, a Software Engineer and Full Stack Developer on
-              a mission to create impactful digital solutions. With expertise in
-              Next.js, React, ASP.NET, TypeScript, and Python, but my true
-              strength lies in my insatiable appetite for learning.
+              I&apos;m Luis Mercado, a Software Engineer and Full Stack
+              Developer on a mission to create impactful digital solutions. With
+              expertise in Next.js, React, ASP.NET, TypeScript, and Python, but
+              my true strength lies in my insatiable appetite for learning.
             </span>
           </BlurFade>
         </span>
@@ -42,7 +41,7 @@ export default function Description() {
           className="text-base sm:text-lg md:text-xl lg:text-[18px] w-full lg:w-4/5 font-light text-center mt-2"
         >
           BRIDGING PASSION AND INNOVATION IN THE DIGITAL REALM. READY TO
-          REDEFINE WHAT'S POSSIBLE.
+          REDEFINE WHAT&apos;S POSSIBLE.
           <Link href="https://www.linkedin.com/in/luis-merc4do/">
             <ShimmerButton className="mt-4 mx-auto">Contact Me</ShimmerButton>
           </Link>

@@ -25,23 +25,22 @@ export default function Contact() {
             <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[100px] lg:h-[100px] relative rounded-full overflow-hidden mb-4 sm:mb-0">
               <Image
                 fill={true}
-                alt={"image"}
-                src={`/images/background.jpg`}
+                alt="background image"
+                src="/images/background.jpg"
                 className="object-cover"
               />
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5vw] font-light sm:ml-3 lg:ml-[0.3em]">
-              Let's work together
+              Let&apos;s work together
             </h2>
-            <br />
           </span>
-          <h2 className="text-base text-justify mb-4  md:text-xl font-normal sm:ml-3 lg:ml-[0.3em]">
-            <br />
-            DRIVEN BY PASSION, I'VE WORKED TIRELESSLY TO CHASE MY DREAMS, NEVER
-            SETTLING FOR 'GOOD ENOUGH'. MY HUNGER FOR KNOWLEDGE IS CONSTANT -
-            I'M ALWAYS LEARNING, ALWAYS IMPROVING. EVERY DAY IS A NEW
-            OPPORTUNITY TO PUSH MY LIMITS AND EXPAND MY SKILLS. I'M COMMITTED TO
-            GROWTH, AND MAKING THE MOST OF EVERY OPPORTUNITY THAT COMES MY WAY
+          <h2 className="text-base text-justify mb-4 md:text-xl font-normal sm:ml-3 lg:ml-[0.3em] mt-4">
+            DRIVEN BY PASSION, I&apos;VE WORKED TIRELESSLY TO CHASE MY DREAMS,
+            NEVER SETTLING FOR &apos;GOOD ENOUGH&apos;. MY HUNGER FOR KNOWLEDGE
+            IS CONSTANT - I&apos;M ALWAYS LEARNING, ALWAYS IMPROVING. EVERY DAY
+            IS A NEW OPPORTUNITY TO PUSH MY LIMITS AND EXPAND MY SKILLS.
+            I&apos;M COMMITTED TO GROWTH, AND MAKING THE MOST OF EVERY
+            OPPORTUNITY THAT COMES MY WAY
           </h2>
           <div
             className="absolute left-1/2 transform -translate-x-1/2 -bottom-16 
