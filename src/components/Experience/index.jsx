@@ -9,10 +9,10 @@ import { experiencesData } from "../../../libs/data";
 
 export default function Experience() {
   return (
-    <section className="py-16 container mb-10">
-      <div className="text-right mb-8">
+    <section className="py-16 mb-10">
+      <div className="text-center mb-8">
         <h2 className="text-5xl md:text-7xl font-bold mb-4">My Experience</h2>
-        <h2 className="text-sm md:text-base text-gray-600 max-w-2xl text-right ml-auto">
+        <h2 className="text-sm md:text-base text-gray-600 max-w-2xl text-right mx-auto">
           A UNIQUE BLEND OF LEGAL CRITICAL THINKING AND INNOVATIVE APPROACHES
           AND FORGING MY DISTINCTIVE PATH{" "}
           <span className="italic underline text-center">
