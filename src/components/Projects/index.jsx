@@ -51,7 +51,7 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section className="py-16 px-4 container mx-auto mb-10">
+    <section className="py-2 px-4 container mx-auto mb-10">
       <div>
         <h2 className="text-5xl md:text-7xl font-bold mb-4">Featured Work</h2>
         <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl text-justify">

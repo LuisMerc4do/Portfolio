@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className={`py-16 px-4 container mx-auto mt-10 mb-2 transition-all duration-500 ease-out opacity-100 translate-y-0""
+      className={`py-16 px-4 container mx-auto mt-4 mb-2 transition-all duration-500 ease-out opacity-100 translate-y-0""
       }`}
     >
       <div className="text-right">
