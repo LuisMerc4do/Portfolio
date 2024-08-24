@@ -14,33 +14,36 @@ const projects = [
   {
     title: "CoLearning - a tech learning platform for people in Colombia!",
     category: "FULL-STACK APP • LMS • INTEGRATED IDE • AI • RESPONSIVE •",
-    image: "/images/project-colearning.webp",
+    image: "/images/projectcolearning.jpg",
     description:
       "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device.",
-    link: "#",
+    link: "https://colearning.vercel.app/",
   },
   {
-    title: "FINANCE APP - a stock management platform",
+    title: "Stock Portfolio App - a stock management platform",
     category:
-      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER",
-    image: "/images/project-finapp.webp",
+      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS ",
+    image: "/images/project-finapp.jpg",
     description:
       "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making.",
     link: "#",
+    videoUrl: "https://www.youtube.com/embed/MiKL_1Ep6C8?si=fPAjS8h4wMlUmVSw",
   },
   {
     title: "PDF Reader AI - a saas to chat with any PDF",
     category:
-      "FULL-STACK • AI SAAS • NODE.JS • TYPESCRIPT •NEXTJS • POSTGRESQL",
-    image: "/images/project-pdfreader.webp",
+      "FULL-STACK • AI SAAS • NODE.JS • TYPESCRIPT • NEXTJS • POSTGRESQL",
+    image: "/images/project-pdfreader.jpg",
     description:
       "PDF Reader AI is a cutting-edge SaaS application that allows users to interact with PDF documents using natural language. Built with Node.js, TypeScript, and Next.js, it leverages AI to provide intelligent responses to user queries.",
     link: "#",
+    videoUrl: "https://www.youtube.com/embed/POJXu9v_L3I?si=cIprLhzly-tJw7r8",
   },
   {
-    title: "Law Firm APP - a legal firm management System",
-    category: "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • POSTGRESQL",
-    image: "/images/project-lawfirm.webp",
+    title: "Law Firm App - a legal firm management System",
+    category:
+      "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • UNIT TESTS •  POSTGRESQL",
+    image: "/images/project-lawfirm.jpg",
     description:
       "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL.",
     link: "#",
@@ -63,7 +66,7 @@ const ProjectCard = ({ project, onClick }) => {
         <motion.img
           src={project.image}
           alt={project.title}
-          className={`w-full h-64 object-cover ${
+          className={`w-full h-full object-fit ${
             imageLoaded ? "opacity-100" : "opacity-0"
           }`}
           onLoad={() => setImageLoaded(true)}
@@ -85,16 +88,30 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent>
+      <DialogContent className="max-w-4xl w-full">
         <DialogHeader>
-          <DialogTitle>{project.title}</DialogTitle>
+          <DialogTitle className="text-2xl">{project.title}</DialogTitle>
         </DialogHeader>
-        <DialogDescription>{project.description}</DialogDescription>
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover rounded-md my-4"
-        />
+        <DialogDescription className="text-lg">
+          {project.description}
+        </DialogDescription>
+        <div className="flex md:flex-row gap-4 my-4">
+          {project.videoUrl ? (
+            <iframe
+              className="w-full h-[500px]"
+              src={project.videoUrl}
+              title="Project Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-[500px] object-cover rounded-md"
+            />
+          )}
+        </div>
         <DialogFooter>
           <Button asChild>
             <a href={project.link} target="_blank" rel="noopener noreferrer">

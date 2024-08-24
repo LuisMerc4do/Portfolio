@@ -23,8 +23,8 @@ const LusionInspiredLanding = () => {
           transition={{ duration: 0.8 }}
           className="text-7xl md:text-7xl max-w-5xl text-black mb-3"
         >
-          <span className="font-serif font-black md:text-8xl">
-            Luis Mercado
+          <span className="font-medium font-serif md:text-8xl">
+            LUIS MERCADO
           </span>
           <br />
           <span className="font-serif md:text-6xl text-4xl">
@@ -49,14 +49,19 @@ const LusionInspiredLanding = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <span className="text-4xl font-extrabold font-serif">
+          <span className="text-xl md:text-3xl font-extrabold font-serif">
             Passionated and Different
           </span>{" "}
           <br />
-          <h2 className="font-serif mt-5">Based in Sydney, Australia</h2>
+          <h2 className="font-serif md:mt-5 text-xl md:text-3xl">
+            Based in Sydney, Australia
+          </h2>
         </motion.p>
         <Link href="https://www.linkedin.com/in/luis-merc4do/">
-          <ShimmerButton className="h-16 w-40 " background="rgba(0, 0, 0, 0.8)">
+          <ShimmerButton
+            className="md:h-16 md:w-40  "
+            background="rgba(0, 0, 0, 0.8)"
+          >
             Get in Touch
           </ShimmerButton>
         </Link>

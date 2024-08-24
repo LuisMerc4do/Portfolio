@@ -6,7 +6,7 @@ export const experiencesData = [
     title: "Bachelor of Software Engineering (Artificial Intelligence)",
     location: "Sydney, AUS",
     description:
-      "Pursuing a cutting-edge degree in Software Engineering with a focus on AI, [maintaining a High Distinction average]. Demonstrating exceptional academic performance while adapting to a new cultural environment. Actively engaging in AI projects, hackathons, and industry networking events to build a strong foundation for a career in innovative software development.",
+      "Pursuing a degree in Software Engineering with a focus on AI, [maintaining a High Distinction average]. Demonstrating exceptional academic performance while adapting to a new cultural environment. Actively engaging in AI projects, hackathons, and industry networking events to build a strong foundation for a career in innovative software development.",
     icon: React.createElement(GraduationCap),
     date: "Expected 2026",
   },
