@@ -10,9 +10,11 @@ export default function Skills() {
       className={`py-16 px-4 container mx-auto mt-4 mb-2 transition-all duration-500 ease-out opacity-100 translate-y-0""
       }`}
     >
-      <div className="text-right">
-        <h2 className="text-5xl md:text-7xl font-bold mb-4">My Skills</h2>
-        <p className="text-sm md:text-base ml-auto text-gray-600 mb-8 max-w-2xl">
+      <div className="text-center">
+        <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif">
+          My Skills
+        </h2>
+        <p className="text-sm md:text-base ml-auto text-gray-600 mb-8 max-w-2xl mx-auto">
           HARNESSING THE POWER OF DIVERSE TECHNOLOGIES: A COMPREHENSIVE SKILLSET
           BUILT THROUGH RELENTLESS CURIOSITY, PRACTICAL APPLICATION, AND A
           PASSION FOR PUSHING DIGITAL BOUNDARIES

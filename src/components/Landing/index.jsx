@@ -16,24 +16,22 @@ const LusionInspiredLanding = () => {
   return (
     <div className="min-h-screen bg-[#f0f1fa] text-black">
       <Header />
-      <main className="flex flex-col items-center justify-center px-6 py-24 md:py-24 text-center">
+      <main className="flex flex-col items-center justify-center px-6 py-24 md:py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl md:text-7xl font-black max-w-3xl text-black mb-3"
+          className="text-7xl md:text-7xl max-w-5xl text-black mb-3"
         >
-          <span>Luis Mercado</span>
+          <span className="font-serif font-black md:text-8xl">
+            Luis Mercado
+          </span>
+          <br />
+          <span className="font-serif md:text-6xl text-4xl">
+            ✦ Software Engineer ✦
+          </span>
         </motion.h1>
-        <motion.p
-          className="text-2xl mb-8 max-w-xs md:max-w-4xl"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          PASSIONATED & DIFFERENT ✦SOFTWARE ENGINEER✦ <br />
-          <span>BASED IN SYDNEY</span>
-        </motion.p>
+
         {/* 3D Objects Placeholder */}
         <Suspense fallback={<SkeletonLoader />}>
           <motion.div
@@ -45,13 +43,25 @@ const LusionInspiredLanding = () => {
             <SplineComponent />
           </motion.div>
         </Suspense>
+        <motion.p
+          className="text-2xl mb-8 max-w-xs md:max-w-4xl"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <span className="text-4xl font-extrabold font-serif">
+            Passionated and Different
+          </span>{" "}
+          <br />
+          <h2 className="font-serif mt-5">Based in Sydney, Australia</h2>
+        </motion.p>
         <Link href="https://www.linkedin.com/in/luis-merc4do/">
           <ShimmerButton className="h-16 w-40 " background="rgba(0, 0, 0, 0.8)">
             Get in Touch
           </ShimmerButton>
         </Link>
         {/* Scroll Indicator */}
-        <div className="mt-32 text-sm uppercase tracking-widest">
+        <div className="mt-4 text-sm uppercase tracking-widest">
           SCROLL TO EXPLORE ↓
         </div>
       </main>

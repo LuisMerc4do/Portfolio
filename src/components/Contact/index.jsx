@@ -30,7 +30,7 @@ export default function Contact() {
                 className="object-cover"
               />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5vw] font-light sm:ml-3 lg:ml-[0.3em]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5vw] font-light sm:ml-3 lg:ml-[0.3em] font-serif">
               Let&apos;s work together
             </h2>
           </span>
