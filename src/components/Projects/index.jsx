@@ -22,11 +22,11 @@ const projects = [
   {
     title: "Stock Portfolio App - a stock management platform",
     category:
-      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS ",
+      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
     image: "/images/project-finapp.jpg",
     description:
-      "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making.",
-    link: "#",
+      "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making. Implementation of Unit Tests and deployed on Azure web apps and connected through each other",
+    link: "https://github.com/LuisMerc4do/FinanceApi",
     videoUrl: "https://www.youtube.com/embed/MiKL_1Ep6C8?si=fPAjS8h4wMlUmVSw",
   },
   {
@@ -36,17 +36,17 @@ const projects = [
     image: "/images/project-pdfreader.jpg",
     description:
       "PDF Reader AI is a cutting-edge SaaS application that allows users to interact with PDF documents using natural language. Built with Node.js, TypeScript, and Next.js, it leverages AI to provide intelligent responses to user queries.",
-    link: "#",
+    link: "https://github.com/LuisMerc4do/chatwithpdfAI",
     videoUrl: "https://www.youtube.com/embed/POJXu9v_L3I?si=cIprLhzly-tJw7r8",
   },
   {
     title: "Law Firm App - a legal firm management System",
     category:
-      "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • UNIT TESTS •  POSTGRESQL",
+      "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • UNIT TESTS • AZURE DEVOPS •  POSTGRESQL",
     image: "/images/project-lawfirm.jpg",
     description:
-      "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL.",
-    link: "#",
+      "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL. Deployed with azure devops and using UNIT TESTING",
+    link: "https://github.com/LuisMerc4do/law-firm-system",
   },
 ];
 
