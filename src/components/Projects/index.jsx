@@ -88,17 +88,17 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl w-full">
+      <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl">{project.title}</DialogTitle>
         </DialogHeader>
         <DialogDescription className="text-lg">
           {project.description}
         </DialogDescription>
-        <div className="flex md:flex-row gap-4 my-4">
+        <div className="flex flex-col md:flex-row gap-4 my-4">
           {project.videoUrl ? (
             <iframe
-              className="w-full h-[500px]"
+              className="w-full h-[300px] md:h-[500px]"
               src={project.videoUrl}
               title="Project Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -108,12 +108,12 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-[500px] object-cover rounded-md"
+              className="w-full h-[300px] md:h-[500px] object-cover rounded-md"
             />
           )}
         </div>
-        <DialogFooter>
-          <Button asChild>
+        <DialogFooter className="mt-4">
+          <Button asChild className="w-full md:w-auto">
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               View Project
             </a>
