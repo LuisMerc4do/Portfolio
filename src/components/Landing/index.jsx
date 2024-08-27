@@ -27,7 +27,7 @@ const LusionInspiredLanding = () => {
             LUIS MERCADO
           </span>
           <br />
-          <span className="font-serif md:text-6xl text-4xl">
+          <span className="font-serif md:text-6xl text-3xl">
             ✦ Software Engineer ✦
           </span>
         </motion.h1>

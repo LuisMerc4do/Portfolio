@@ -8,7 +8,7 @@ const words = [
   "Software Engineer",
   "Full-Stack Developer",
   "ASP.NET Developer",
-  "Azure DevOps",
+  "Microsoft Azure",
 ];
 
 export default function Preloader({ onComplete }) {
