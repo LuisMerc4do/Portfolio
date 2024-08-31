@@ -26,7 +26,7 @@ export default function Description() {
     >
       <div className="max-w-[1400px] flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-[50px] relative">
         <span className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] leading-tight lg:leading-[1.3] m-0 text-justify font-serif">
-          <BlurFade delay={0.25 * 2} inView>
+          <BlurFade delay={0.12 * 2} inView>
             <span>
               I&apos;m Luis Mercado, a Software Engineer and Full Stack
               Developer on a mission to create impactful digital solutions. With
@@ -36,7 +36,7 @@ export default function Description() {
           </BlurFade>
         </span>
         <BlurFade
-          delay={0.25 * 2}
+          delay={0.16 * 2}
           inView
           className="text-base sm:text-lg md:text-xl lg:text-[18px] w-full lg:w-4/5 font-light text-center mt-2"
         >
