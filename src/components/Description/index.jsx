@@ -30,8 +30,9 @@ export default function Description() {
             <span>
               I&apos;m Luis Mercado, a Software Engineer and Full Stack
               Developer on a mission to create impactful digital solutions. With
-              expertise in ASP.NET, React, Next.Js, TypeScript, and Python, but
-              my true strength lies in my insatiable appetite for learning.
+              expertise in ASP.NET, React, Next.Js, TypeScript, Microsoft Azure
+              and Python, but my true strength lies in my insatiable appetite
+              for learning.
             </span>
           </BlurFade>
         </span>

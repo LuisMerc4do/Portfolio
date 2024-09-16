@@ -15,6 +15,7 @@ const projects = [
     title: "CoLearning - a tech learning platform for people in Colombia!",
     category: "FULL-STACK APP • LMS • INTEGRATED IDE • AI • RESPONSIVE •",
     image: "/images/projectcolearning.jpg",
+    imagesProject: [""],
     description:
       "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device.",
     link: "https://colearning.vercel.app/",
