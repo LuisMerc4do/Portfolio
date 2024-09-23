@@ -138,25 +138,14 @@ const Projects = () => {
 
   return (
     <section className="py-2 px-4 container mx-auto mb-10">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif text-center">
-          Featured Work
-        </h2>
-        <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl text-center mx-auto">
-          THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
-          SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
-        </p>
-      </motion.div>
-      <motion.div
-        className="flex flex-wrap -mx-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
+      <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif text-center">
+        Featured Work
+      </h2>
+      <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl text-center mx-auto">
+        THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
+        SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
+      </p>
+      <div className="flex flex-wrap -mx-4">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
@@ -164,7 +153,7 @@ const Projects = () => {
             onClick={handleProjectClick}
           />
         ))}
-      </motion.div>
+      </div>
       <ProjectDialog
         project={selectedProject}
         isOpen={!!selectedProject}
