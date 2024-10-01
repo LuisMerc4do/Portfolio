@@ -41,7 +41,7 @@ const LusionInspiredLanding = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="w-9/12 max-w-4xl rounded-xl h-72 mt-6 bg-black flex items-center justify-center mb-10"
+            className="w-full max-w-4xl rounded-xl h-52 mt-6 bg-black flex items-center justify-center mb-10"
           >
             <SplineComponent />
           </motion.div>
