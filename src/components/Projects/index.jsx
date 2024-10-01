@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -15,7 +16,24 @@ const projects = [
     title: "CoLearning - a tech learning platform for people in Colombia!",
     category: "FULL-STACK APP • LMS • INTEGRATED IDE • AI • RESPONSIVE •",
     image: "/images/projectcolearning.jpg",
-    imagesProject: [""],
+    images: [
+      "/images/colearning/1.webp",
+      "/images/colearning/2.webp",
+      "/images/colearning/3.webp",
+      "/images/colearning/4.webp",
+      "/images/colearning/5.webp",
+      "/images/colearning/6.webp",
+      "/images/colearning/7.webp",
+      "/images/colearning/8.webp",
+      "/images/colearning/9.webp",
+      "/images/colearning/10.webp",
+      "/images/colearning/11.webp",
+      "/images/colearning/12.webp",
+      "/images/colearning/13.webp",
+      "/images/colearning/14.webp",
+      "/images/colearning/15.webp",
+      "/images/colearning/16.webp",
+    ],
     description:
       "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device.",
     link: "https://colearning.vercel.app/",
@@ -25,6 +43,11 @@ const projects = [
     category:
       "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
     image: "/images/project-finapp.jpg",
+    images: [
+      "/images/project-finapp.jpg",
+      "/images/finapp2.jpg",
+      "/images/finapp3.jpg",
+    ],
     description:
       "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making. Implementation of Unit Tests and deployed on Azure web apps and connected through each other",
     link: "https://github.com/LuisMerc4do/FinanceApi",
@@ -35,6 +58,11 @@ const projects = [
     category:
       "FULL-STACK • AI SAAS • NODE.JS • TYPESCRIPT • NEXTJS • POSTGRESQL",
     image: "/images/project-pdfreader.jpg",
+    images: [
+      "/images/project-pdfreader.jpg",
+      "/images/pdfreader2.jpg",
+      "/images/pdfreader3.jpg",
+    ],
     description:
       "PDF Reader AI is a cutting-edge SaaS application that allows users to interact with PDF documents using natural language. Built with Node.js, TypeScript, and Next.js, it leverages AI to provide intelligent responses to user queries.",
     link: "https://github.com/LuisMerc4do/chatwithpdfAI",
@@ -45,6 +73,11 @@ const projects = [
     category:
       "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • UNIT TESTS • AZURE DEVOPS •  POSTGRESQL",
     image: "/images/project-lawfirm.jpg",
+    images: [
+      "/images/project-lawfirm.jpg",
+      "/images/lawfirm2.jpg",
+      "/images/lawfirm3.jpg",
+    ],
     description:
       "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL. Deployed with azure devops and using UNIT TESTING",
     link: "https://github.com/LuisMerc4do/law-firm-system",
@@ -52,8 +85,6 @@ const projects = [
 ];
 
 const ProjectCard = ({ project, onClick }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
   return (
     <motion.div
       className="w-full md:w-1/2 p-4"
@@ -64,16 +95,13 @@ const ProjectCard = ({ project, onClick }) => {
         className="rounded-lg overflow-hidden shadow-lg cursor-pointer"
         onClick={() => onClick(project)}
       >
-        <motion.img
+        <Image
           src={project.image}
           alt={project.title}
-          className={`w-full h-full object-fit ${
-            imageLoaded ? "opacity-100" : "opacity-0"
-          }`}
-          onLoad={() => setImageLoaded(true)}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: imageLoaded ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+          width={500}
+          height={300}
+          layout="responsive"
+          objectFit="cover"
         />
         <div className="p-4 bg-gray-100">
           <p className="text-sm text-gray-600">{project.category}</p>
@@ -85,6 +113,21 @@ const ProjectCard = ({ project, onClick }) => {
 };
 
 const ProjectDialog = ({ project, isOpen, onClose }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = useCallback(() => {
+    setCurrentImageIndex(
+      (prevIndex) => (prevIndex + 1) % project.images.length
+    );
+  }, [project]);
+
+  const prevImage = useCallback(() => {
+    setCurrentImageIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + project.images.length) % project.images.length
+    );
+  }, [project]);
+
   if (!project) return null;
 
   return (
@@ -96,7 +139,7 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
         <DialogDescription className="text-lg">
           {project.description}
         </DialogDescription>
-        <div className="flex flex-col md:flex-row gap-4 my-4">
+        <div className="relative">
           {project.videoUrl ? (
             <iframe
               className="w-full h-[300px] md:h-[500px]"
@@ -106,11 +149,35 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
               allowFullScreen
             ></iframe>
           ) : (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-[300px] md:h-[500px] object-cover rounded-md"
-            />
+            <>
+              <Image
+                src={project.images[currentImageIndex]}
+                alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                width={800}
+                height={500}
+                layout="responsive"
+                objectFit="cover"
+                className="rounded-md"
+              />
+              {project.images.length > 1 && (
+                <div className="absolute top-1/2 left-0 right-0 flex justify-between transform -translate-y-1/2">
+                  <Button
+                    onClick={prevImage}
+                    className="bg-black bg-opacity-50 text-white"
+                    aria-label="Previous image"
+                  >
+                    &#8249;
+                  </Button>
+                  <Button
+                    onClick={nextImage}
+                    className="bg-black bg-opacity-50 text-white"
+                    aria-label="Next image"
+                  >
+                    &#8250;
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
         <DialogFooter className="mt-4">
@@ -128,13 +195,13 @@ const ProjectDialog = ({ project, isOpen, onClose }) => {
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleProjectClick = (project) => {
+  const handleProjectClick = useCallback((project) => {
     setSelectedProject(project);
-  };
+  }, []);
 
-  const handleCloseDialog = () => {
+  const handleCloseDialog = useCallback(() => {
     setSelectedProject(null);
-  };
+  }, []);
 
   return (
     <section className="py-2 px-4 container mx-auto mb-10">
