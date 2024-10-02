@@ -21,7 +21,6 @@ const projects = [
       "/images/colearning/2.webp",
       "/images/colearning/3.webp",
       "/images/colearning/4.webp",
-      "/images/colearning/5.webp",
       "/images/colearning/6.webp",
       "/images/colearning/7.webp",
       "/images/colearning/8.webp",
