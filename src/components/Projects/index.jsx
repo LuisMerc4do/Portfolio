@@ -34,7 +34,7 @@ const projects = [
       "/images/colearning/16.webp",
     ],
     description:
-      "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device.",
+      "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device. CoLearning is a free online technology learning platform designed to reduce educational inequalities and offer new growth opportunities to all Colombians. CoLearning represents a new way of thinking about education, prioritizing the learning of emerging technologies and their application in solving real-world problems. Additionally, it fosters innovation and entrepreneurship by providing students with the necessary tools to turn their ideas into concrete projects.",
     link: "https://colearning.vercel.app/",
   },
   {
@@ -42,13 +42,8 @@ const projects = [
     category:
       "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
     image: "/images/project-finapp.jpg",
-    images: [
-      "/images/project-finapp.jpg",
-      "/images/finapp2.jpg",
-      "/images/finapp3.jpg",
-    ],
     description:
-      "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making. Implementation of Unit Tests and deployed on Azure web apps and connected through each other",
+      "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making. Implementation of Unit Tests and deployed on Azure web apps and connected through each other. Full-Stack Finance App project developed with c# asp.net core, Microsoft Sql server, React, Typescript and tailwindcss. Project developed from scratch to improve understanding and learning skills related to the creation  - Implementation of Entity Framework - Implementation of Identity for authentication and register - Await/async implementation - Connection and database management with Microsoft Sql server - Authorization by role and connection with identity - Front-end developed with react.js, typescript, tailwindcss - Search functionality - Portfolio functionality - Stock profile, stock data, stop description and dashboard functionality - Design guide to test future implementations  - Webpage structure",
     link: "https://github.com/LuisMerc4do/FinanceApi",
     videoUrl: "https://www.youtube.com/embed/MiKL_1Ep6C8?si=fPAjS8h4wMlUmVSw",
   },
