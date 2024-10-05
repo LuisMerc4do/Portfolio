@@ -36,12 +36,12 @@ const LusionInspiredLanding = () => {
           </span>
         </motion.h1>
 
-        <Suspense fallback={<SkeletonLoader />}>
+        <Suspense>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="w-full max-w-4xl rounded-xl h-52 mt-6 bg-black flex items-center justify-center mb-10"
+            className="w-full max-w-6xl rounded-xl h-72 mt-6 bg-black flex items-center justify-center mb-10"
           >
             <SplineComponent />
           </motion.div>
