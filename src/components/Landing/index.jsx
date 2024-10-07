@@ -11,7 +11,16 @@ const SkeletonLoader = () => (
     <div className="w-3/4 h-2/3 bg-black rounded animate-pulse"></div>
   </div>
 );
-
+const SpinnerLoader = () => {
+  return (
+    <div className="w-full max-w-7xl rounded-xl h-96 mt-6 bg-black flex items-center justify-center overflow-hidden">
+      <div className="relative w-16 h-16">
+        <div className="absolute top-0 left-0 w-full h-full border-4 border-white rounded-full animate-spin border-t-transparent"></div>
+        <div className="absolute top-0 left-0 w-full h-full border-4 border-white rounded-full animate-ping opacity-25"></div>
+      </div>
+    </div>
+  );
+};
 const CornerMarker = ({ position }) => (
   <div className={`hidden md:block fixed ${position} m-4 text-3xl`}>+</div>
 );
@@ -36,7 +45,7 @@ const LusionInspiredLanding = () => {
           </span>
         </motion.h1>
 
-        <Suspense>
+        <Suspense fallback={<SpinnerLoader />}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
