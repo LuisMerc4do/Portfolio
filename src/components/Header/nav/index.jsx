@@ -54,7 +54,6 @@ export default function NavigationMenu() {
             />
           ))}
         </nav>
-        <Footer />
       </div>
       <Curve />
     </motion.div>
