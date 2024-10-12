@@ -6,16 +6,17 @@ import Link from "next/link";
 const projects = [
   {
     title: "CoLearning - a tech learning platform for people in Colombia!",
-    category: "FULL-STACK APP • LMS • INTEGRATED IDE • AI • RESPONSIVE •",
+    category:
+      "FULL-STACK • LMS • INTEGRATED IDE • AI • RESPONSIVE • REACTJS • NEXTJS •",
     image: "/images/projectcolearning.jpg",
     description:
       "CoLearning is an innovative tech learning platform designed specifically for Colombian learners. It features an integrated IDE, AI-powered assistance, and a responsive design to make learning accessible on any device. CoLearning is a free online technology learning platform designed to reduce educational inequalities and offer new growth opportunities to all Colombians.",
     link: "/projects/project1",
   },
   {
-    title: "Law Firm App - a legal firm management System",
+    title: "AI Powered Sales Assistant SaaS, Email Marketing and ChatBot",
     category:
-      "BACKEND • ASP.NET • JWT • IMEMORYCACHE • SERILOG • UNIT TESTS • AZURE DEVOPS •  POSTGRESQL",
+      "FULLSTACK • ASP.NET • REACTJS • TYPESCRIPT • NEXTJS • AZURE DEVOPS •  POSTGRESQL",
     image: "/images/project-lawfirm.jpg",
     description:
       "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL. Deployed with azure devops and using UNIT TESTING",
@@ -24,7 +25,7 @@ const projects = [
   {
     title: "Stock Portfolio App - a stock management platform",
     category:
-      "FULL-STACK • STOCK APP • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
+      "FULL-STACK • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
     image: "/images/project-finapp.jpg",
     description:
       "A comprehensive stock management platform built with ASP.NET, React, and TypeScript. It provides real-time stock data, portfolio management, and advanced analytics for informed decision-making. Implementation of Unit Tests and deployed on Azure web apps and connected through each other.",
