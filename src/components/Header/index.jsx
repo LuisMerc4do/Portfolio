@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Nav from "./nav";
 import Magnetic from "../../common/Magnetic";
+import Link from "next/link";
 
 export default function Header() {
   const header = useRef(null);
@@ -29,22 +30,25 @@ export default function Header() {
         ref={header}
         className="fixed top-0 left-0 right-0 flex justify-between items-center z-50 w-full text-black p-3 md:px-10 font-normal text-lg"
       >
-        <div className="flex cursor-pointer group">
-          <p className="m-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
-            ©
-          </p>
-          <div className="flex relative overflow-hidden whitespace-nowrap ml-[5px] transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:pr-[30px]">
-            <p className="relative transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-x-[250%]">
-              - Luis
+        <Link href="/">
+          <div className="flex cursor-pointer group">
+            <p className="m-0 transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:rotate-[360deg]">
+              ©
             </p>
-            <p className="relative transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] pl-[0.3em] group-hover:-translate-x-[125px]">
-              Mercado
-            </p>
-            <p className="absolute left-[120px] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] pl-[0.3em] group-hover:-translate-x-[125px]">
-              Software Engineer
-            </p>
+
+            <div className="flex relative overflow-hidden whitespace-nowrap ml-[5px] transition-all duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:pr-[30px]">
+              <p className="relative transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-x-[250%]">
+                - Luis
+              </p>
+              <p className="relative transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] pl-[0.3em] group-hover:-translate-x-[125px]">
+                Mercado
+              </p>
+              <p className="absolute left-[120px] transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] pl-[0.3em] group-hover:-translate-x-[125px]">
+                Software Engineer
+              </p>
+            </div>
           </div>
-        </div>
+        </Link>
         <nav className="flex items-center  box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-md rounded-lg">
           {["Work", "About", "Contact"].map((item) => (
             <Magnetic key={item}>
