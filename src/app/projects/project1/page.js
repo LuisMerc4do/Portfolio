@@ -1,84 +1,68 @@
-import Header from "@/components/Header";
-import { CardDescription } from "../../../components/ui/card";
 import React from "react";
+import Header from "@/components/Header";
+import { CardDescription } from "@/components/ui/card";
 
 const Project1 = () => {
-  const post = {
-    createdAt: new Date(),
-  };
   return (
-    <div className="container flex justify-center my-10">
+    <div className="container mx-auto px-4 my-10">
       <Header />
-      <div className="lg:w-6/12 flex flex-col">
-        <CardDescription></CardDescription>
-        <h2 className="text-6xl font-bold text-center">
+      <div className="max-w-4xl mx-auto">
+        <CardDescription className="mb-4 text-center">
+          Project Description
+        </CardDescription>
+        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-6">
           CoLearning - a tech learning platform for underprivileged people in
           Colombia!
         </h2>
-        <div className="text-xl parsed-container flex flex-col mt-10 gap-10 text-justify mb-10">
-          CoLearning is an innovative tech learning platform designed
-          specifically for Colombian learners. It features an integrated IDE,
-          AI-powered assistance, and a responsive design to make learning
-          accessible on any device. CoLearning is a free online technology
-          learning platform designed to reduce educational inequalities and
-          offer new growth opportunities to all Colombians. CoLearning
-          represents a new way of thinking about education, prioritizing the
-          learning of emerging technologies and their application in solving
-          real-world problems. Additionally, it fosters innovation and
-          entrepreneurship by providing students with the necessary tools to
-          turn their ideas into concrete projects.
-          <br />
-          <br />
-          Developed a comprehensive learning platform using NEXT.js, React,
-          Typescript, and PostgreSQL. Implemented an Integrated Development
-          Environment (IDE) and Test Cases. Implemented AI-powered learning
-          features. And Complete LMS management System
+        <div className="text-base md:text-lg lg:text-xl space-y-6 mb-10 text-justify">
+          <p>
+            CoLearning is an innovative tech learning platform designed
+            specifically for Colombian learners. It features an integrated IDE,
+            AI-powered assistance, and a responsive design to make learning
+            accessible on any device. CoLearning is a free online technology
+            learning platform designed to reduce educational inequalities and
+            offer new growth opportunities to all Colombians.
+          </p>
+          <p>
+            CoLearning represents a new way of thinking about education,
+            prioritizing the learning of emerging technologies and their
+            application in solving real-world problems. Additionally, it fosters
+            innovation and entrepreneurship by providing students with the
+            necessary tools to turn their ideas into concrete projects.
+          </p>
+          <p>
+            Developed a comprehensive learning platform using Next.js, React,
+            TypeScript, and PostgreSQL. Implemented an Integrated Development
+            Environment (IDE) and Test Cases. Implemented AI-powered learning
+            features and a complete LMS management system.
+          </p>
         </div>
-        <img src="/images/colearning/1.webp" alt="Colearning" />
-        <img src="/images/colearning/2.webp" alt="Colearning" />
-        <img src="/images/colearning/3.webp" alt="Colearning" />
-        <img src="/images/colearning/4.webp" alt="Colearning" />
-        <img src="/images/colearning/6.webp" alt="Colearning" />
-        <img src="/images/colearning/7.webp" alt="Colearning" />
-        <img
-          src="/images/colearning/8.webp"
-          alt="Colearning"
-          width={400}
-          height={200}
-          className="mx-auto"
-        />
-        <img
-          src="/images/colearning/9.webp"
-          alt="Colearning"
-          width={400}
-          height={200}
-          className="mx-auto"
-        />
-        <img src="/images/colearning/10.webp" alt="Colearning" />
-        <img src="/images/colearning/11.webp" alt="Colearning" />
-        <img src="/images/colearning/12.webp" alt="Colearning" />
-        <img
-          src="/images/colearning/13.webp"
-          alt="Colearning"
-          width={400}
-          height={200}
-          className="mx-auto"
-        />
-        <img
-          src="/images/colearning/14.webp"
-          alt="Colearning"
-          width={400}
-          height={200}
-          className="mx-auto"
-        />
-        <img
-          src="/images/colearning/15.webp"
-          alt="Colearning"
-          width={400}
-          height={200}
-          className="mx-auto"
-        />
-        <img src="/images/colearning/16.webp" alt="Colearning" />
+        <div className="space-y-4">
+          {[1, 2, 3, 4, 6, 7].map((num) => (
+            <img
+              key={num}
+              src={`/images/colearning/${num}.webp`}
+              alt={`Colearning ${num}`}
+              className="w-full h-auto"
+            />
+          ))}
+          {[8, 9, 13, 14, 15].map((num) => (
+            <img
+              key={num}
+              src={`/images/colearning/${num}.webp`}
+              alt={`Colearning ${num}`}
+              className="w-full max-w-md mx-auto h-auto"
+            />
+          ))}
+          {[10, 11, 12, 16].map((num) => (
+            <img
+              key={num}
+              src={`/images/colearning/${num}.webp`}
+              alt={`Colearning ${num}`}
+              className="w-full h-auto"
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

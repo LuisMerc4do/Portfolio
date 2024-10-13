@@ -1,42 +1,60 @@
-import Header from "@/components/Header";
-import { CardDescription } from "../../../components/ui/card";
 import React from "react";
+import Header from "@/components/Header";
+import { CardDescription } from "@/components/ui/card";
 
 const Project3 = () => {
-  const post = {
-    createdAt: new Date(),
-  };
   return (
-    <div className="container flex justify-center my-10">
+    <div className="container mx-auto px-4 my-10">
       <Header />
-      <div className="lg:w-6/12 flex flex-col">
-        <CardDescription></CardDescription>
-        <h2 className="text-6xl font-bold text-center">
+      <div className="max-w-4xl mx-auto">
+        <CardDescription className="mb-4 text-center">
+          Project Description
+        </CardDescription>
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center mb-6">
           Stock Portfolio App - a stock management platform
         </h2>
-        <div className="text-xl parsed-container flex flex-col mt-10 gap-10 text-justify mb-10">
-          A comprehensive stock management platform built with ASP.NET, React,
-          and TypeScript. It provides real-time stock data, portfolio
-          management, and advanced analytics for informed decision-making.
-          Implementation of Unit Tests and deployed on Azure web apps and
-          connected through each other. Full-Stack Finance App project developed
-          with c# asp.net core, Microsoft Sql server, React, Typescript and
-          tailwindcss. Project developed from scratch to improve understanding
-          and learning skills related to the creation - Implementation of Entity
-          Framework - Implementation of Identity for authentication and register
-          - Await/async implementation - Connection and database management with
-          Microsoft Sql server - Authorization by role and connection with
-          identity - Front-end developed with react.js, typescript, tailwindcss
-          - Search functionality - Portfolio functionality - Stock profile,
-          stock data, stop description and dashboard functionality - Design
-          guide to test future implementations - Webpage structure
+        <div className="text-base md:text-lg lg:text-xl space-y-6 mb-10 text-justify">
+          <p>
+            A comprehensive stock management platform built with ASP.NET, React,
+            and TypeScript. It provides real-time stock data, portfolio
+            management, and advanced analytics for informed decision-making.
+            Implementation of Unit Tests and deployed on Azure web apps and
+            connected through each other.
+          </p>
+          <p>
+            Full-Stack Finance App project developed with C# ASP.NET Core,
+            Microsoft SQL Server, React, TypeScript and Tailwind CSS. Project
+            developed from scratch to improve understanding and learning skills
+            related to the creation.
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Implementation of Entity Framework</li>
+            <li>Implementation of Identity for authentication and register</li>
+            <li>Await/async implementation</li>
+            <li>
+              Connection and database management with Microsoft SQL Server
+            </li>
+            <li>Authorization by role and connection with identity</li>
+            <li>Front-end developed with React.js, TypeScript, Tailwind CSS</li>
+            <li>Search functionality</li>
+            <li>Portfolio functionality</li>
+            <li>
+              Stock profile, stock data, stock description and dashboard
+              functionality
+            </li>
+            <li>Design guide to test future implementations</li>
+            <li>Webpage structure</li>
+          </ul>
         </div>
-        <div className="w-full mx-auto">
-          <img src="/images/stockportfolio/1.webp" alt="Portfolio" />
-          <img src="/images/stockportfolio/2.webp" alt="Portfolio" />
-          <img src="/images/stockportfolio/3.webp" alt="Portfolio" />
-          <img src="/images/stockportfolio/4.webp" alt="Portfolio" />
-          <img src="/images/stockportfolio/5.webp" alt="Portfolio" />
+        <div className="space-y-4">
+          {[1, 2, 3, 4, 5].map((num) => (
+            <img
+              key={num}
+              src={`/images/stockportfolio/${num}.webp`}
+              alt={`Portfolio ${num}`}
+              className="w-full h-auto"
+            />
+          ))}
         </div>
       </div>
     </div>
