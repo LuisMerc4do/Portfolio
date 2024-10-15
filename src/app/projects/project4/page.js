@@ -3,10 +3,12 @@ import React from "react";
 import { CardDescription } from "@/components/ui/card";
 import Link from "next/link";
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import Header from "@/components/Header";
 
 const Project4 = () => {
   return (
     <div className="container mx-auto px-4 my-10">
+      <Header />
       <div className="max-w-4xl mx-auto">
         <CardDescription className="mt-16 md:mt-4 mb-4 text-center">
           Project Description
