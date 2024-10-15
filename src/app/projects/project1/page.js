@@ -1,13 +1,16 @@
+"use client";
 import React from "react";
 import Header from "@/components/Header";
 import { CardDescription } from "@/components/ui/card";
+import Link from "next/link";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const Project1 = () => {
   return (
     <div className="container mx-auto px-4 my-10">
       <Header />
       <div className="max-w-4xl mx-auto">
-        <CardDescription className="mb-4 text-center">
+        <CardDescription className="mt-16 md:mt-4 mb-4 text-center">
           Project Description
         </CardDescription>
         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-6">
@@ -37,6 +40,14 @@ const Project1 = () => {
             features and a complete LMS management system.
           </p>
         </div>
+        <Link href="https://colearning.vercel.app/">
+          <ShimmerButton
+            className="md:h-16 md:w-40 mx-auto my-6"
+            background="rgba(0, 0, 0, 0.8)"
+          >
+            Visit the Site
+          </ShimmerButton>
+        </Link>
         <div className="space-y-4">
           {[1, 2, 3, 4, 6, 7].map((num) => (
             <img
@@ -63,6 +74,14 @@ const Project1 = () => {
             />
           ))}
         </div>
+        <Link href="/">
+          <ShimmerButton
+            className="md:h-16 md:w-40 mx-auto my-6"
+            background="rgba(0, 0, 0, 0.8)"
+          >
+            Back To Projects
+          </ShimmerButton>
+        </Link>
       </div>
     </div>
   );

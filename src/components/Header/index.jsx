@@ -24,6 +24,20 @@ export default function Header() {
     // Remove the ScrollTrigger animation for hiding the header
   }, []);
 
+  const navItems = [
+    {
+      title: "Home",
+      href: "/",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
+    },
+    {
+      title: "Contact",
+      href: "https://www.linkedin.com/in/luis-merc4do/",
+    },
+  ];
   return (
     <>
       <header
@@ -50,13 +64,14 @@ export default function Header() {
           </div>
         </Link>
         <nav className="flex items-center  box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-md rounded-lg">
-          {["Work", "About", "Contact"].map((item) => (
-            <Magnetic key={item}>
-              <div className="flex flex-col relative z-10 p-2 md:p-[15px] cursor-pointer group">
-                <a className="relative z-20">{item}</a>
-                <div className="absolute w-[5px] h-[5px] bottom-0 md:top-[45px] left-1/2 bg-black rounded-full transform scale-0 -translate-x-1/2 transition-transform duration-200 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:scale-100"></div>
-              </div>
-            </Magnetic>
+          {navItems.map((item) => (
+            <Link key={item.title} href={item.href}>
+              <Magnetic>
+                <div className="flex flex-col relative z-10 p-2 md:p-[15px] cursor-pointer group">
+                  <span className="relative z-20">{item.title}</span>
+                </div>
+              </Magnetic>
+            </Link>
           ))}
         </nav>
       </header>
