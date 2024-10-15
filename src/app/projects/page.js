@@ -57,7 +57,7 @@ const AllProjects = () => {
         </p>
         <div className="flex flex-wrap -mx-4">
           {projects.map((project, index) => (
-            <Link href={project.link}>
+            <Link href={project.link} key={project.title}>
               <div className="rounded-lg overflow-hidden shadow-lg w-3/4 mb-6 mx-auto">
                 <Image
                   src={project.image}
