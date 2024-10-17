@@ -41,7 +41,7 @@ const Project4 = () => {
           </ShimmerButton>
         </Link>
         <div className="space-y-4">
-          {[1, 2, 3].map((num) => (
+          {[2, 1, 3].map((num) => (
             <img
               key={num}
               src={`/images/chatpdf/${num}.webp`}
@@ -50,7 +50,7 @@ const Project4 = () => {
             />
           ))}
         </div>
-        <Link href="/">
+        <Link href="/projects">
           <ShimmerButton
             className="md:h-16 md:w-40 mx-auto my-6"
             background="rgba(0, 0, 0, 0.8)"

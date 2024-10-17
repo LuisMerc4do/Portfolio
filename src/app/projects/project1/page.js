@@ -74,7 +74,7 @@ const Project1 = () => {
             />
           ))}
         </div>
-        <Link href="/">
+        <Link href="/projects">
           <ShimmerButton
             className="md:h-16 md:w-40 mx-auto my-6"
             background="rgba(0, 0, 0, 0.8)"
