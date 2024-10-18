@@ -17,10 +17,10 @@ const projects = [
     title: "AI Powered Sales Assistant SaaS, Email Marketing and ChatBot",
     category:
       "FULLSTACK • ASP.NET • REACTJS • TYPESCRIPT • NEXTJS • AZURE DEVOPS •  POSTGRESQL",
-    image: "/images/project-lawfirm.jpg",
+    image: "/images/chatbot/1.webp",
     description:
       "A robust Full-Stack solution for chatbot assistant, with management portal, email marketing, chats handling and external integrations. built with ASP.NET and Next.js, shadcn, tailwind CSS It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL.",
-    link: "/images/chatbot/1.webp",
+    link: "/projects/project2",
   },
   {
     title: "Stock Portfolio App - a stock management platform",
