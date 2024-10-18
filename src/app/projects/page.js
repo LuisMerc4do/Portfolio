@@ -21,7 +21,7 @@ const projects = [
     image: "/images/project-lawfirm.jpg",
     description:
       "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL. Deployed with azure devops and using UNIT TESTING",
-    link: "/projects/project2",
+    link: "/images/chatbot/1.wepb",
   },
   {
     title: "Stock Portfolio App - a stock management platform",
