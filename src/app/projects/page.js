@@ -20,8 +20,8 @@ const projects = [
       "FULLSTACK • ASP.NET • REACTJS • TYPESCRIPT • NEXTJS • AZURE DEVOPS •  POSTGRESQL",
     image: "/images/project-lawfirm.jpg",
     description:
-      "A robust backend solution for law firm management, built with ASP.NET. It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL. Deployed with azure devops and using UNIT TESTING",
-    link: "/images/chatbot/1.wepb",
+      "A robust Full-Stack solution for chatbot assistant, with management portal, email marketing, chats handling and external integrations. built with ASP.NET and Next.js, shadcn, tailwind CSS It features secure authentication with JWT, efficient caching with IMemoryCache, comprehensive logging with Serilog, and reliable data storage with PostgreSQL.",
+    link: "/images/chatbot/1.webp",
   },
   {
     title: "Stock Portfolio App - a stock management platform",
