@@ -19,65 +19,20 @@ const Project1 = () => {
         </h2>
         <div className="text-base md:text-lg lg:text-xl space-y-6 mb-10 text-justify">
           <p>
-            CoLearning is an innovative tech learning platform designed
-            specifically for Colombian learners. It features an integrated IDE,
-            AI-powered assistance, and a responsive design to make learning
-            accessible on any device. CoLearning is a free online technology
-            learning platform designed to reduce educational inequalities and
-            offer new growth opportunities to all Colombians.
-          </p>
-          <p>
-            CoLearning represents a new way of thinking about education,
-            prioritizing the learning of emerging technologies and their
-            application in solving real-world problems. Additionally, it fosters
-            innovation and entrepreneurship by providing students with the
-            necessary tools to turn their ideas into concrete projects.
-          </p>
-          <p>
-            Developed a comprehensive learning platform using Next.js, React,
-            TypeScript, and PostgreSQL. Implemented an Integrated Development
-            Environment (IDE) and Test Cases. Implemented AI-powered learning
-            features and a complete LMS management system.
+            A robust Full-Stack solution for chatbot assistant, with management
+            portal, email marketing, chats handling and external integrations.
+            built with ASP.NET and Next.js, shadcn, tailwind CSS It features
+            secure authentication with JWT, efficient caching with IMemoryCache,
+            comprehensive logging with Serilog, and reliable data storage with
+            PostgreSQL.
           </p>
         </div>
-        <Link href="https://colearning.vercel.app/">
-          <ShimmerButton
-            className="md:h-16 md:w-40 mx-auto my-6"
-            background="rgba(0, 0, 0, 0.8)"
-          >
-            Visit the Site
-          </ShimmerButton>
-        </Link>
-        <Link href="https://colearning.vercel.app/">
-          <ShimmerButton
-            className="md:h-16 md:w-40 mx-auto my-6"
-            background="rgba(0, 0, 0, 0.8)"
-          >
-            Visit the Site
-          </ShimmerButton>
-        </Link>
         <div className="space-y-4">
-          {[1, 2, 3, 4, 6, 7].map((num) => (
+          {[1, 2, 3, 4, 5].map((num) => (
             <img
               key={num}
-              src={`/images/colearning/${num}.webp`}
-              alt={`Colearning ${num}`}
-              className="w-full h-auto"
-            />
-          ))}
-          {[8, 9, 13, 14, 15].map((num) => (
-            <img
-              key={num}
-              src={`/images/colearning/${num}.webp`}
-              alt={`Colearning ${num}`}
-              className="w-full max-w-md mx-auto h-auto"
-            />
-          ))}
-          {[10, 11, 12, 16].map((num) => (
-            <img
-              key={num}
-              src={`/images/colearning/${num}.webp`}
-              alt={`Colearning ${num}`}
+              src={`/images/chatbot/${num}.webp`}
+              alt={`Chatbot ${num}`}
               className="w-full h-auto"
             />
           ))}
