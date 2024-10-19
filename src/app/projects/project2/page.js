@@ -5,7 +5,7 @@ import { CardDescription } from "@/components/ui/card";
 import Link from "next/link";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 
-const Project1 = () => {
+const Project2 = () => {
   return (
     <div className="container mx-auto px-4 my-10">
       <Header />
@@ -14,8 +14,7 @@ const Project1 = () => {
           Project Description
         </CardDescription>
         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center mb-6">
-          CoLearning - a tech learning platform for underprivileged people in
-          Colombia!
+          AI Powered Sales Assistant SaaS, Email Marketing and ChatBot
         </h2>
         <div className="text-base md:text-lg lg:text-xl space-y-6 mb-10 text-justify">
           <p>
@@ -50,4 +49,4 @@ const Project1 = () => {
   );
 };
 
-export default Project1;
+export default Project2;
