@@ -2,7 +2,7 @@
 
 import React from "react";
 import { skillsData } from "../../../libs/data";
-
+import StackIcon from "tech-stack-icons";
 export default function Skills() {
   return (
     <section
