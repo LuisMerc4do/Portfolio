@@ -63,7 +63,7 @@ export default function Header() {
             </div>
           </div>
         </Link>
-        <nav className="flex items-center  box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-md rounded-lg">
+        <nav className="flex items-center box-border bg-[#f0f1fa] bg-opacity-10 backdrop-blur-xl rounded-lg">
           {navItems.map((item) => (
             <Link key={item.title} href={item.href}>
               <Magnetic>

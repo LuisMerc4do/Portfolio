@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    title: "CoLearning - a tech learning platform for people in Colombia!",
+    title: "CoLearning",
+    subtitle: "- a tech learning platform for people in Colombia!",
     category:
       "FULL-STACK • LMS • INTEGRATED IDE • AI • RESPONSIVE • REACTJS • NEXTJS •",
     image: "/images/projectcolearning.jpg",
@@ -14,7 +16,8 @@ const projects = [
     link: "/projects/project1",
   },
   {
-    title: "AI Powered Sales Assistant SaaS, Email Marketing and ChatBot",
+    title: "AI Powered Sales Assistant",
+    subtitle: "- SaaS, Email Marketing and ChatBot",
     category:
       "FULLSTACK • ASP.NET • REACTJS • TYPESCRIPT • NEXTJS • AZURE DEVOPS •  POSTGRESQL",
     image: "/images/chatbot/1.webp",
@@ -23,7 +26,8 @@ const projects = [
     link: "/projects/project2",
   },
   {
-    title: "Stock Portfolio App - a stock management platform",
+    title: "Stock Portfolio App",
+    subtitle: "- a Stock management platform",
     category:
       "FULL-STACK • ASP.NET • REACT • TYPESCRIPT • SQL SERVER • UNIT TESTS • AZURE WEB APPS ",
     image: "/images/project-finapp.jpg",
@@ -33,7 +37,8 @@ const projects = [
   },
 
   {
-    title: "PDF Reader AI - a saas to chat with any PDF",
+    title: "PDF Reader AI",
+    subtitle: "- a saas to chat with any PDF",
     category:
       "FULL-STACK • AI SAAS • NODE.JS • TYPESCRIPT • NEXTJS • POSTGRESQL",
     image: "/images/project-pdfreader.jpg",
@@ -45,28 +50,28 @@ const projects = [
 
 const ProjectCard = ({ project }) => {
   return (
-    <motion.div
-      className="w-full md:w-1/2 p-4"
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <Link href={project.link}>
-        <div className="rounded-lg overflow-hidden shadow-lg cursor-pointer">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={500}
-            height={300}
-            layout="responsive"
-            objectFit="cover"
-          />
-          <div className="p-4 bg-gray-100">
-            <p className="text-sm text-gray-600">{project.category}</p>
-            <h3 className="text-xl font-semibold mt-2">{project.title}</h3>
-          </div>
-        </div>
-      </Link>
-    </motion.div>
+    <Link href={project.link} className="w-full p-4  md:max-w-6xl mx-auto">
+      <div className="text-center">
+        <h3 className="mt-2 text-3xl md:text-4xl ">
+          <a className="font-bold">{project.title}</a>
+          {project.subtitle}
+        </h3>
+        <p className="text-sm text-gray-600 mb-6">{project.category}</p>
+      </div>
+      <div className="rounded-lg overflow-hidden shadow-lg cursor-pointer">
+        <Image
+          src={project.image}
+          alt={project.title}
+          width={500}
+          height={300}
+          layout="responsive"
+          objectFit="cover"
+        />
+      </div>
+      <h2 className="mt-6 md:text-right underline font-thin">
+        View Project <ArrowRight className="inline-block size-4" />
+      </h2>
+    </Link>
   );
 };
 
@@ -80,7 +85,7 @@ const Projects = () => {
         THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
         SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
       </p>
-      <div className="flex flex-wrap -mx-4">
+      <div className="flex flex-wrap -mx-4 gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}
