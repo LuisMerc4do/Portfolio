@@ -56,7 +56,7 @@ const ProjectCard = ({ project }) => {
           <a className="font-bold">{project.title}</a>
           {project.subtitle}
         </h3>
-        <p className="text-sm text-gray-600 mb-6">{project.category}</p>
+        <p className="text-sm text-gray-600 md:mb-6">{project.category}</p>
       </div>
       <div className="rounded-lg overflow-hidden shadow-lg cursor-pointer">
         <Image
@@ -68,7 +68,7 @@ const ProjectCard = ({ project }) => {
           objectFit="cover"
         />
       </div>
-      <h2 className="mt-6 md:text-right underline font-thin">
+      <h2 className="mt-2 md:mt-6 md:text-right text-center underline font-thin">
         View Project <ArrowRight className="inline-block size-4" />
       </h2>
     </Link>
@@ -77,7 +77,7 @@ const ProjectCard = ({ project }) => {
 
 const Projects = () => {
   return (
-    <section className="py-2 px-4 container mx-auto mb-10">
+    <section className="py-2 px-4 container mx-auto md:mb-10">
       <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif text-center">
         Featured Work
       </h2>
@@ -85,7 +85,7 @@ const Projects = () => {
         THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
         SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
       </p>
-      <div className="flex flex-wrap -mx-4 gap-10">
+      <div className="flex flex-wrap -mx-4 md:gap-10">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

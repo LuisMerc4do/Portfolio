@@ -5,12 +5,8 @@ import { skillsData } from "../../../libs/data";
 import StackIcon from "tech-stack-icons";
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className={`py-16 px-4 container mx-auto mt-4 mb-2 transition-all duration-500 ease-out opacity-100 translate-y-0""
-      }`}
-    >
-      <div className="text-center">
+    <>
+      <div className="text-center mt-6">
         <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif">
           My Skills
         </h2>
@@ -30,6 +26,6 @@ export default function Skills() {
           </li>
         ))}
       </ul>
-    </section>
+    </>
   );
 }

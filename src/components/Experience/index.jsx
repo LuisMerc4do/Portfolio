@@ -14,12 +14,12 @@ export default function Experience() {
         <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif">
           My Experience
         </h2>
-        <h2 className="text-sm md:text-base text-gray-600 max-w-2xl text-right mx-auto">
-          A UNIQUE BLEND OF LEGAL CRITICAL THINKING AND INNOVATIVE APPROACHES
-          AND FORGING MY DISTINCTIVE PATH{" "}
-          <span className="italic underline text-center">
-            . WHILE STUDYING I ALWAYS WORKED AS A CASUAL PROGRAMMER FOR GAME
-            SERVERS, SMALL COMPANIES AND AS FREELANCER
+        <h2 className="text-sm md:text-base text-gray-600 max-w-2xl text-center mx-auto">
+          A UNIQUE BLEND OF CRITICAL THINKING AND INNOVATIVE APPROACHES FORGING
+          MY DISTINCTIVE PATH{" "}
+          <span className="italic underline text-center mx-auto">
+            .I HAVE BEEN PROGRAMMING SINCE I AM 15. WHILE STUDYING I ALWAYS
+            WORKED AS A FREELANCER FOR SMALL COMPANIES AND MEDIUM COMPANIES
           </span>
         </h2>
       </div>
