@@ -43,8 +43,9 @@ export default function Home() {
       <React.Suspense fallback={<div>Loading...</div>}>
         <Landing />
         <Description />
-        <Skills />
         <Projects />
+        <Skills />
+        
         <Experience />
         <Contact />
       </React.Suspense>

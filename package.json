@@ -31,7 +31,8 @@
     "react-vertical-timeline-component": "^3.6.0",
     "sass": "^1.64.0",
     "tailwind-merge": "^2.5.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "tech-stack-icons": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
