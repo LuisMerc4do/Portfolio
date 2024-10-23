@@ -85,7 +85,7 @@ const Projects = () => {
         THESE WORKS REPRESENT MY DEDICATION TO CRAFTING IMPACTFUL DIGITAL
         SOLUTIONS, EACH ONE A STEPPING STONE IN MY RAPID GROWTH AS A DEVELOPER
       </p>
-      <div className="flex flex-wrap -mx-4 md:gap-10">
+      <div className="flex flex-wrap -mx-4 md:gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

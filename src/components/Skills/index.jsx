@@ -6,7 +6,7 @@ import StackIcon from "tech-stack-icons";
 export default function Skills() {
   return (
     <>
-      <div className="text-center mt-6">
+      <div className="text-center mt-6 mb-10">
         <h2 className="text-5xl md:text-7xl font-bold mb-4 font-serif">
           My Skills
         </h2>
