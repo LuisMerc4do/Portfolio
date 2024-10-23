@@ -32,7 +32,16 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, [initScroll]);
-
+  const SpinnerLoader = () => {
+    return (
+      <div className="w-full rounded-xl h-96 mt-6 flex items-center justify-center overflow-hidden">
+        <div className="relative w-16 h-16">
+          <div className="absolute top-0 left-0 w-full h-full border-4 border-black rounded-full animate-spin border-t-transparent"></div>
+          <div className="absolute top-0 left-0 w-full h-full border-4 border-black rounded-full animate-ping opacity-25"></div>
+        </div>
+      </div>
+    );
+  };
   return (
     <motion.main
       className=""
@@ -40,12 +49,12 @@ export default function Home() {
       animate={{ opacity: isLoaded ? 1 : 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense fallback={<SpinnerLoader />}>
         <Landing />
         <Description />
         <Projects />
         <Skills />
-        
+
         <Experience />
         <Contact />
       </React.Suspense>
